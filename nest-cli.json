@@ -8,6 +8,15 @@
     "tsConfigPath": "apps/complex-sample/tsconfig.app.json"
   },
   "projects": {
+    "construct-method": {
+      "type": "application",
+      "root": "apps/construct-method",
+      "entryFile": "main",
+      "sourceRoot": "apps/construct-method/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/construct-method/tsconfig.app.json"
+      }
+    },
     "complex-sample": {
       "type": "application",
       "root": "apps/complex-sample",
