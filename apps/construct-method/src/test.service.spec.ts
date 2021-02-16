@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TestService } from './test.service';
 import { DepService } from './dep.service';
+import { TestService } from './test.service';
 
 describe(TestService.name, () => {
   let testService: TestService;
@@ -12,6 +12,10 @@ describe(TestService.name, () => {
         {
           provide: DepService,
           useValue: {
+            prepareSomething: () => {
+              console.log('Prepared something for you');
+            },
+
             doSomething: (x: string) => {
               console.log(x);
               return x;
